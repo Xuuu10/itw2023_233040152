@@ -1,0 +1,212 @@
+/* font */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../FONT/BebasNeue-Regular.woff) format('woff');
+}
+
+/* Style Utama */
+body {
+    font: 20px/40px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+    background-color: #ddd;
+        background-image: url(../IMAGE/background\ \(1\).jpg);
+  
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px auto;
+    text-align: center;
+    text-shadow: 1px 3px 3px  #6e1919;
+    color: #6e1919;
+    
+}
+.container3 h1 {
+    width: 300px;
+    border: 4px 4px 4px 4px #ddd;
+    background-color: #ddd;
+    border-radius: 70px 70px 70px 70px;
+    padding: 30px;
+    box-shadow: 0 0 6px 6px #911a32;
+}
+
+.container {
+    width: 720px;
+    background-color: #f7f2f3;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 6px 6px #911a32;
+    border-radius:70px 70px 70px 70px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden */;
+    border: 7px solid #911a32;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.gallery li,
+.gallery li img,
+.gallery li span {
+    border-radius: 50%;
+}
+
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200,200,200,.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #911a32;
+    text-shadow: 1px 1px 1px #911a32 ;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: 0.3s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+/* Overlay */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    z-index: 9999;
+    transition: .8S;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.overlay img {
+    max-height: 100%;
+   box-shadow: 1px 1px 10px #911a32;
+}
+
+.overlay:target img {
+    animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+
+    position: absolute;
+    top: 30px;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f5000c;
+    left: 90%;
+    border-radius: 50%;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.overlay:target .close {
+    animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .Prev {
+    animation: Fadeaja .5s .5s forwards;
+}
+
+/* Navigasi */
+
+.next, .Prev {
+    width: 60px;
+    height: 63px;
+    background-image: url(../IMAGE/kanan.png);
+    position: absolute;
+    text-indent: -9999px;
+    border-radius: 50%;
+    top: 44%;
+    margin-left: 40px;
+    opacity: 0;
+}
+
+.Prev {
+    background-image: url(../IMAGE/kiri.png.png);
+    margin-left: -100px;
+}
+
+/* animasi */
+
+@keyframes Fadeaja {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 20px;
+    }
+}
+
+.container2 {
+    width: 1500px;
+    height: 1000px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #ddd;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 15px 15px #911a32; 
+    border: 5px solid #911a32; 
+}
+
+.container2 h1 {
+    color: #1d2599;
+    text-decoration:underline;
+
+}

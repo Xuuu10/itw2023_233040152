@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 - Pertemuan 7</title>
+    <style>
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(50, 5, 96);
+            /* margin: auto; */
+            border-radius: 10px;
+            /* border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%; */
+            /* border-radius: 50% 50% 50% 0; */
+            /* box-shadow: <x-offset> <y-offset> <blur> [size] <color> ; */
+            /* box-shadow: 5px 5px 15px 10px red, -5px -5px 15px 10px blue, 0 0 15px 40px green;   */
+            box-shadow: 0 0 0 10px red, 0 0 0 20px green, 0 0 0 30px grey, 0 0 0 40px hotpink;
+
+           
+             /* Mengisi tinggi viewport */
+        }
+
+        .kotak:hover {
+            border-radius: 50%;
+            background-color: black;
+            transition: 3s;
+            /* rotate: 360deg;
+            scale: 0; */
+            transform: rotate(360deg) scale(3) 
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            }
+         
+    
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="kotak"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
