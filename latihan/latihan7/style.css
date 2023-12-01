@@ -87,13 +87,13 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 5px;
+    gap: 8px;
     
 }
 
 .menu a {
     display: block;
-    background-color: black;
+    background-color: red;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -101,6 +101,11 @@ body {
     text-transform: uppercase;
     font-size: 0.9em;
     border-radius: 10px;
+    box-shadow: 0 0 4px 4px black;
+}
+
+.menu a:hover {
+    color: rgb(240, 205, 7);
 }
 
 /* Hamburger Menu */
@@ -183,6 +188,7 @@ body {
     width: 50px;
     height: 50px;
     margin: auto;
+    margin-bottom: 2em;
 }
 
 .service h3 {
@@ -194,8 +200,10 @@ body {
     font-weight: 200;
     letter-spacing: 1px;
     font-size: 0.8em;
-    color: black;
+    color: rgb(175, 9, 9);
     font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 6px red;
    
 }
 
@@ -205,6 +213,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 7px;
+    
 }
 
 .gallery h2 {
@@ -253,6 +262,13 @@ body {
         order: -1;
         justify-items: end;
     }
+
+     .menu a {
+        font-size: 18px;
+        padding: 8px;
+        width: 160px;
+    } 
+
     .menu-toggle {
      display: flex;
     }
@@ -273,6 +289,9 @@ body {
            transform: translateY(-100%);
            transition: 1s;
            opacity: 0;
+           backdrop-filter: blur(2px);
+           background: transparent;
+           
         }
     
         .menu ul.slide {
@@ -286,6 +305,11 @@ body {
 @media (max-width: 600px) {
     body {
         margin: 20px;
+    }
+
+    .menu a {
+        font-size: 10px;
+        width: 100px;
     }
 
 
